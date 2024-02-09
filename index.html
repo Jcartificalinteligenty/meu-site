@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jean</title>
+    <style>
+       h1
+       {
+        font-size: 40px;
+        background: darkblue;
+        border-radius: 10px;
+        border-style:ridge;
+        color: white;
+        text-align: center;
+        
+       }
+       div
+       {
+        background: rgba(0,0,0,0.1);
+        border-radius: 10px;
+        position: absolute;
+        padding: 80px;
+        top: 40%;
+        left: 16%;
+        transform: translate(-50%, -50%);
+        
+       }
+       body
+       {
+        background-image:linear-gradient(65deg, white, whitesmoke, whitesmoke,rgba(0, 255, 255, 0.418))
+       }
+       button
+       {
+        
+        background-color: aqua;
+        font-size: 14px;
+    
+       }
+
+       
+
+
+    </style>
+</head>
+<body>
+    <h1>1º algoritimo criado por mim</h1>
+    <div>
+    <h3>Responda as perguntas abaixo:</h3>
+    <p> O Jean é um excelente programador?<br><input type="text" name="txt" id="txt">
+        <button id="bt" onclick="calcular()">Conferir</button>
+       <br> <strong id="resu"></strong></br>
+    </br>
+    <br></br>
+    </p>
+    <p>O Jean é mais bonito que o Flavinho?<br><input type="text" name= "txt1" id="txt1">
+        <button id="bt1" onclick="calcular1()">Conferir</button>
+        <br> <strong id="res"></strong></br>
+    </br>
+    </p>    
+       </div> 
+       <script>
+        function calcular() {
+            var resposta = window.document.querySelector('input#txt')
+            var alterntiva = window.document.querySelector('strong#resu')
+            var c = (resposta.value)
+
+            if(c == 'Não' || c == 'não' || c == 'nao' || c == 'negativo' || c == 'nunca' || c == 'n' || c == 'N' || c == 'Nao' ) {
+                alterntiva.innerHTML = `Resposta ERRADA!! (tente novamente)`
+            }
+            else {
+                alterntiva.innerHTML = `Parabéns, Certa Resposta!!!`
+            }
+            
+            
+        }
+        
+
+        function calcular1() {
+            var respot = window.document.querySelector('input#txt1')
+            var altern = window.document.querySelector('strong#res')
+            var cert = (respot.value)
+
+            if(cert == 'Não' || cert == 'não' || cert == 'nao' || cert == 'nunca' || cert == 'negativo' || cert == 'n' || cert == 'N' || cert == 'Não') {
+                altern.innerHTML = `Resposta ERRADA!! (tente novamente)`
+            }
+            else {
+                altern.innerHTML = `Parabéns, Certa Resposta!!!`
+            }
+        }
+            
+            
+            
+        
+
+       
+       </script>
+</body>
+</html>
